@@ -64,21 +64,11 @@
             "browserTarget": "test-app:build"
           }
         },
-       
-        "test1": {
-          "project name": "angular-sonar-coverage",
-          "architect": "test1",
-          "options": {
-            "codeCoverage": true,
-            "coverageReporter": {
-              "type": "in-memory"
-            }
-          }
-        },
- 
+       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+            "codeCoverage": true,
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
